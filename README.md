@@ -26,23 +26,25 @@ Start the server
 
     alacena start --port 8080
 
-### Connect
-
-    telnet 8080
-
 ### Set a value
 
-Use the SET command with two arguments. First argument is the key, second argument
-is the value to store.
+Make a POST request to /record to store a VALUE with KEY as the index.
 
-    SET KEY, A value
+    curl -d "key=KEY&value=VALUE" http://localhost:8080/record
+
+Returns
+
+    { key: KEY, status: ok }
 
 ### Get a value
 
-Use the GET command with the KEY to retreive as the argument.
+Make a GET request to /record KEY on the path to retreive the stored value.
 
-    GET KEY
-    A value
+    curl http://localhost:8080/get/KEY
+
+Returns
+
+    { key: KEY, value: VALUE }
 
 ## Contributing
 
