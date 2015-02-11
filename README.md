@@ -1,5 +1,7 @@
 # Alacena
 
+[![Build Status](https://travis-ci.org/dabit/alacena.svg?branch=master)](https://travis-ci.org/dabit/alacena)
+
 Key-Value store written in Ruby. Just because.
 
 ## Installation
